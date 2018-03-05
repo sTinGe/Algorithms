@@ -17,12 +17,9 @@ public class lc_038 {
             } else {
                 count++;
             }
-
-            if (i == result.length()-1) {
-                sb.append(count);
-                sb.append(result.charAt(i));
-            }
         }
+        sb.append(count);
+        sb.append(result.charAt(result.length()-1));
         return sb.toString();
     }
 

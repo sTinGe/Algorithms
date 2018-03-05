@@ -22,8 +22,8 @@ public class lc_029 {
     }
 
     public void run() {
-        int dividend = -2147483648;
-        int divisor = 2;
+        int dividend = 17;
+        int divisor = 5;
 
         System.out.println(divide(dividend, divisor));
     }

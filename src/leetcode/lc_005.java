@@ -26,7 +26,7 @@ public class lc_005 {
     }
 
     public void run() {
-        String s = "cbbd";
+        String s = "eacbbcaf";
         System.out.println(longestPalindrome(s));
     }
 }

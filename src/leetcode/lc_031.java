@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.Arrays;
+
 public class lc_031 {
     public void nextPermutation(int[] nums) {
         if (nums.length < 2) return;
@@ -21,6 +23,8 @@ public class lc_031 {
         }
         swap(nums, k, index-1);
         reverseSort(nums, index, nums.length-1);
+
+        System.out.println(Arrays.toString(nums));
     }
 
     public void swap(int[] nums, int i, int j) {
@@ -36,8 +40,7 @@ public class lc_031 {
     }
 
     public void run() {
-        int[] nums = new int[]{1,3,2};
+        int[] nums = new int[]{1,2,6,3,5,4};
         nextPermutation(nums);
-        for(int num: nums) System.out.print(num);
     }
 }

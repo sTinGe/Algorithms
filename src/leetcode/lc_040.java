@@ -15,6 +15,7 @@ public class lc_040 {
     private void backtrack(int[] candidates, List<List<Integer>> list, List<Integer> temp, int target, int start) {
         if (target > 0) {
             for(int i=start; i<candidates.length && target >= candidates[i]; i++) {
+                if (i > start && candidates[i] == candidates[i-1]) continue;
                 temp.add(candidates[i]);
                 backtrack(candidates, list, temp, target-candidates[i], i+1);
                 temp.remove(temp.size()-1);

@@ -21,6 +21,6 @@ class TreeLinkNode {
 
 public class Main {
     public static void main(String[] args) {
-        new lc_223().run();
+        new lc_046().run();
     }
 }

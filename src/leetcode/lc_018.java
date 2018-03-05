@@ -41,7 +41,7 @@ public class lc_018 {
     }
 
     public void run() {
-        int[] nums = new int[]{-3,-2,-1,0,0,1,2,3};
+        int[] nums = new int[]{0,0,0,0};
         List<List<Integer>> res = fourSum(nums, 0);
         for(List<Integer> list: res) {
 //            System.out.println("list:");

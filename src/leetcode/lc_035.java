@@ -12,6 +12,15 @@ public class lc_035 {
         return nums.length;
     }
 
+    public int searchInsert2(int[] nums, int target) {
+        int low = 0, high = nums.length;
+        while(low < high) {
+            int mid = low+(high-low)/2;
+            if (nums[mid] < target) low = mid+1;
+            else high = mid;
+        }
+        return low;
+    }
     public void run() {
         int[] nums = new int[]{1};
         int target = 1;

@@ -15,6 +15,18 @@ public class lc_009 {
         return (res == x);
     }
 
+    public boolean isPalindrome2(int x) {
+        int res = 0;
+        if (x < 0 || (x != 0 && x%10 == 0)) return false;
+
+        while(x > res) {
+            res = res*10 + x%10;
+            x /= 10;
+        }
+
+        return (res == x || res/10 == x);
+    }
+
     public void run() {
         System.out.println(isPalindrome(-2147483648));
     }

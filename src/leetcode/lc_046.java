@@ -15,8 +15,10 @@ public class lc_046 {
         if (temp.size() == nums.length) {
             list.add(new ArrayList<>(temp));
         } else {
+            // first case(1,1,2) would be skipped
+            // second for loop [false, true, false] can present first accepted result [1,2,1](two, three, one)
             for(int i=0; i<nums.length; i++) {
-                if (used[i] || i > 0 && nums[i] == nums[i-1] && !used[i-1]) continue;
+                if (used[i] || i > 0 && nums[i] == nums[i-1] && used[i-1]) continue;
                 used[i] = true;
                 temp.add(nums[i]);
                 backtrack(nums, list, temp, used);

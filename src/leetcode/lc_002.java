@@ -14,6 +14,10 @@ public class lc_002 {
                 p = p.next;
                 l1 = l1.next;
                 l2 = l2.next;
+            } else if (l1 == null && l2 == null) {
+                p.next = new ListNode(carry);
+                carry = 0;
+                p = p.next;
             } else if (l1 == null) {
                 int temp = (l2.val+carry)/10;
                 p.next = new ListNode((l2.val+carry)%10);

@@ -13,6 +13,7 @@ public class lc_003 {
             if (map.containsKey(sArray[i])) {
                 // 之後有舊的重複字, 必須要以最新的重複字為主
                 j = Math.max(j, map.get(sArray[i])+1);
+                System.out.println(j);
             }
             map.put(sArray[i], i);
             max = Math.max(max, i-j+1);
@@ -21,7 +22,7 @@ public class lc_003 {
     }
 
     public void run() {
-        String s = "dvdf";
+        String s = "pwwkew";
         System.out.println(lengthOfLongestSubstring(s));
     }
 
